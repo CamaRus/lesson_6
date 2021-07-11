@@ -48,13 +48,13 @@
 import random
 
 number = []
+y, x = 0, 0
 NN = {'bulls': 0, 'cows': 0}
 user_input = None
 
 
 def secret():
     global number
-    # number = random.randint(1000, 9000)
     number = random.sample(range(10), 4)
     print(number)
     if number[0] == 0:
@@ -82,17 +82,12 @@ def check():
     global user_input
     global NN
     number = str(number)
-    # number = str(number)
     print(number)
-    # user_input = list(user_input)
-    # if len(user_input) != 4:
-    #     user_input
     print(user_input)
     if len(number) == len(user_input):
         for y in range(len(number)):
             y = 0
             x = 0
-            # с = x.count(i)
             for i in range(len(number)):
                 if user_input[i] == number[i]:
                     y = y + 1
@@ -102,7 +97,9 @@ def check():
         print(NN)
 
 
-
+def gameover():
+    if y in NN == 4:
+        print('Вы выиграли!')
 
 check()
 
