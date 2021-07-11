@@ -70,6 +70,10 @@ def enter():
     user_input = list(user_input)
     if len(user_input) != 4:
         enter()
+    for i in user_input:
+        x = user_input.count(i)
+        if x>1:
+            enter()
 
 enter()
 
