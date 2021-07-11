@@ -102,7 +102,7 @@ def check():
 
 check()
 
-# while True:
-#     secret()
-#     user_input = input('Введите четырехзначное число:', )
-#     check()
+while True:
+    secret()
+    user_input = input('Введите четырехзначное число:', )
+    check()
