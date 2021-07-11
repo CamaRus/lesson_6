@@ -64,7 +64,14 @@ def secret():
 
 secret()
 
-user_input = input('Введите четырехзначное число:', )
+def enter():
+    global user_input
+    user_input = input('Введите четырехзначное число:', )
+    user_input = list(user_input)
+    if len(user_input) != 4:
+        enter()
+
+enter()
 
 def check():
     global number
@@ -73,7 +80,9 @@ def check():
     number = str(number)
     # number = str(number)
     print(number)
-    user_input = list(user_input)
+    # user_input = list(user_input)
+    # if len(user_input) != 4:
+    #     user_input
     print(user_input)
     if len(number) == len(user_input):
         for y in range(len(number)):
